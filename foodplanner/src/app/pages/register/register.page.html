@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title text-center >Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  padding>
+  <img class="icon" src="assets/icon/users_family_add.svg" alt="">
+  <form  #form="ngForm" (ngSubmit)="checkRegister(form)">
+    <ion-grid>
+      <ion-row padding justify-content-center>
+        <ion-col align-self-center size-md="6" size-lg="5" size-xs="12">
+            <ion-item>
+              <ion-label position="floating" > Nombre</ion-label>
+              <ion-input  name="username" type="text" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating" > Correo electrónico</ion-label>
+              <ion-input name="email" type="email" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating" > Password</ion-label>
+              <ion-input name="password" type="password" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating" > Password again</ion-label>
+              <ion-input name="confirm" type="password" ngModel required></ion-input>
+            </ion-item>
+            <br>
+            <ion-button type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+            <br>
+            <p text-center routerLink="/login">Ya tengo cuenta</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

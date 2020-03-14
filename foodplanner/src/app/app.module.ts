@@ -15,6 +15,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { UserModule } from './user/user.module';
 import { UserEffects } from './user/state/user.effects';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -45,6 +46,7 @@ import { UserEffects } from './user/state/user.effects';
     StatusBar,
     SplashScreen,
     HttpClientModule,
+    AuthService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
