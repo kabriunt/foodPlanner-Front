@@ -26,10 +26,13 @@
               <ion-label position="floating" > Password again</ion-label>
               <ion-input name="confirm" type="password" ngModel required></ion-input>
             </ion-item>
-            <br>
-            <ion-button type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
-            <br>
-            <p text-center routerLink="/login">Ya tengo cuenta</p>
+
+            <ion-footer>
+              <ion-toolbar>
+                <ion-button type="submit" [disabled]="form.invalid" expand="block">Register</ion-button>
+                <ion-button fill="clear" expand="block" (click)="change()">Ya tengo cuenta</ion-button>
+              </ion-toolbar>
+            </ion-footer>
         </ion-col>
       </ion-row>
     </ion-grid>
